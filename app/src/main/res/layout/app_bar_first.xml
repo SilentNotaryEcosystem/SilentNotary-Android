@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.silentnotary.ui.FirstActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentTop="true"
+                    android:contentInsetLeft="0dp"
+                    android:contentInsetStart="0dp"
+                    android:minHeight="?attr/actionBarSize"
+                    android:paddingBottom="0dp"
+                    android:paddingRight="0dp"
+                    android:weightSum="1"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    android:background="@color/white"
+                    >
+
+
+                    <RelativeLayout
+                        android:paddingRight="7dp"
+                        android:paddingLeft="7dp"
+                        android:id="@+id/frameLayoutPar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingRight="5dp">
+
+                                <fr.castorflex.android.circularprogressbar.CircularProgressBar
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:indeterminate="true"
+                                    app:cpb_color="@color/loader_color"
+                                    app:cpb_max_sweep_angle="300"
+                                    app:cpb_min_sweep_angle="10"
+                                    app:cpb_rotation_speed="1.0"
+                                    app:cpb_stroke_width="2dp"
+                                    app:cpb_sweep_speed="1.0"
+                                    android:id="@+id/toolbar_loader"
+                                    android:visibility="gone"
+                                    />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/toolbar_addFileBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                tools:visibility="visible"
+                                android:visibility="gone"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_marginRight="-20dp"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_add_black_24dp" />
+                            </RelativeLayout>
+
+
+                            <FrameLayout
+                                android:id="@+id/toolbar_addBtb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="10dp"
+                                tools:visibility="gone"
+                                >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="match_parent"
+
+                                    android:src="@drawable/ic_upload" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/search_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                tools:visibility="gone"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="5dp">
+
+                                <ImageView
+                                    android:id="@+id/searchIcon"
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_search_black_24dp" />
+                            </FrameLayout>
+
+                        </LinearLayout>
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/relativeLayout">
+
+
+                        </RelativeLayout>
+                        <!-- style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"-->
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:id="@+id/toolbar_menu"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+
+                            tools:visibility="gone"
+                            >
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+
+                                android:layout_gravity="left"
+
+                                android:src="@drawable/ic_menu_black_24dp"
+                                android:visibility="visible"
+                                 />
+                        </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:id="@+id/toolbar_back"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="left"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:layout_gravity="left"
+                            android:src="@drawable/ic_arrow_back_black_24dp"
+                         />
+
+                    </RelativeLayout>
+
+                        <com.silentnotary.widget.textview.ToolbarHeaderTextView
+                            android:id="@+id/toolbar_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:text="Silent Notary"
+                            android:textColor="@color/black"
+                            tools:text="" />
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.Toolbar>
+                <com.miguelcatalan.materialsearchview.MaterialSearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left">
+
+
+                </com.miguelcatalan.materialsearchview.MaterialSearchView>
+
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <include layout="@layout/content_first" />
+</android.support.design.widget.CoordinatorLayout>

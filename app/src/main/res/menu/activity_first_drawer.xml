@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_upload"
+            android:icon="@drawable/ic_upload_stroke"
+            android:title="Upload" />
+        <item
+            android:id="@+id/nav_files"
+            android:icon="@drawable/ic_file_stroke"
+            android:title="My files" />
+        <item
+            android:id="@+id/nav_conversations"
+            android:icon="@drawable/ic_chat"
+            android:title="Conversations" />
+        <item
+            android:id="@+id/nav_user_profile"
+            android:icon="@drawable/ic_user_profile_circle"
+            android:title="Profile" />
+
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit"
+                android:title="Log out" />
+        </menu>
+    </item>
+
+</menu>

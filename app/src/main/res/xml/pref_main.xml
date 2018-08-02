@@ -1,0 +1,75 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <PreferenceCategory
+        android:title="Account Info">
+        <com.silentnotary.widget.Preference
+            android:key="Balance"
+            android:title="Balance">
+        </com.silentnotary.widget.Preference>
+        <com.silentnotary.widget.Preference
+            android:key="TotalMonthlyFee"
+            android:title="Monthly Fee">
+
+        </com.silentnotary.widget.Preference>
+
+        <com.silentnotary.widget.Preference
+            android:key="TotalFileCount"
+            android:title="Stored Files">
+        </com.silentnotary.widget.Preference>
+
+        <com.silentnotary.widget.Preference
+            android:key="TotalFileSizeBytes"
+            android:title="Volume">
+        </com.silentnotary.widget.Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="User info">
+        <com.silentnotary.widget.EditTextPreference
+            android:key="FirstName"
+            android:title="First Name">
+        </com.silentnotary.widget.EditTextPreference>
+        <com.silentnotary.widget.EditTextPreference
+            android:key="LastName"
+            android:title="Last Name"
+            android:summary="">
+        </com.silentnotary.widget.EditTextPreference>
+
+        <com.silentnotary.widget.EditTextPreference
+            android:key="Email"
+            android:title="Email"
+            android:summary="">
+        </com.silentnotary.widget.EditTextPreference>
+        <!--<Preference-->
+            <!--android:title="Facebook Messenger"-->
+            <!--android:summary="Tap to activate">-->
+        <!--</Preference>-->
+
+        <!--<inc.alfacer.silentnotary.widget.EditTextPreference-->
+            <!--android:title="Password"-->
+            <!--android:summary="Edit password">-->
+
+        <!--</inc.alfacer.silentnotary.widget.EditTextPreference>-->
+
+    </PreferenceCategory>
+
+
+    <!--<PreferenceCategory-->
+        <!--android:title="Credit card &amp; Payments">-->
+        <!--<Preference-->
+            <!--android:key="payments"-->
+            <!--android:title="Credit card"-->
+            <!--android:summary="Edit Credit cards info">-->
+            <!--&lt;!&ndash;<intent android:action="your.package.path.to.Activity"/>&ndash;&gt;-->
+        <!--</Preference>-->
+        <!--<Preference-->
+            <!--android:key="payments"-->
+            <!--android:title="Last payments">-->
+            <!--&lt;!&ndash;<intent android:action="your.package.path.to.Activity"/>&ndash;&gt;-->
+        <!--</Preference>-->
+    <!--</PreferenceCategory>-->
+
+
+</PreferenceScreen>

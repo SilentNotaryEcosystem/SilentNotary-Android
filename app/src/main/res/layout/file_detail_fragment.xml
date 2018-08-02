@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="com.silentnotary.model.File" />
+        <import type="android.view.View"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <ScrollView
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/downloadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/file_details_padding">
+
+                <com.silentnotary.widget.textview.FileDetailsDetailHeaderTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="@string/comment_header"
+                     />
+
+                <com.silentnotary.widget.textview.FileDetailsDetailTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="@{item.comment}"
+                    android:textColor="@color/black"
+                    tools:text="My Comment" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:background="@color/divider_color_grey" />
+
+
+                <com.silentnotary.widget.textview.FileDetailsDetailHeaderTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="Created Date"
+                    />
+
+                <com.silentnotary.widget.textview.FileDetailsDetailTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="@{item.CreatedDateFormated}"
+                    tools:text="20.02.01" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:background="@color/divider_color_grey" />
+
+
+                <com.silentnotary.widget.textview.FileDetailsDetailHeaderTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="Expired Date"
+                   />
+
+                <com.silentnotary.widget.textview.FileDetailsDetailTextView
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="@{item.ExpiredDateFormated}"
+                    tools:text="20.02.01" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:background="@color/divider_color_grey" />
+
+
+                <com.silentnotary.widget.textview.FileDetailsDetailHeaderTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="Hash"
+                    />
+
+                <com.silentnotary.widget.textview.FileDetailsDetailTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="@{item.hash}"
+                    tools:text="20.02.01" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/divider_color_grey" />
+
+                <com.silentnotary.widget.textview.FileDetailsDetailHeaderTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="Size"
+                     />
+
+                <com.silentnotary.widget.textview.FileDetailsDetailTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/file_details_padding"
+                    android:text="@{item.sizeFormated}"
+                    tools:text="320 KB" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/divider_color_grey" />
+
+
+                <LinearLayout
+                    android:id="@+id/showTransactionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <com.silentnotary.widget.textview.FileDetailsDetailHeaderTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/file_details_padding"
+                        android:text="Ethereum transaction"
+                        />
+
+                    <com.silentnotary.widget.textview.FileDetailsDetailTextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/file_details_padding"
+                        android:text="@{item.etherTx}"
+                        tools:text="320 KB" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="14dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider_color_grey" />
+
+            <com.silentnotary.widget.textview.FileDetailsDetailTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="Delete" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:id="@+id/downloadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/deleteButton"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="14dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider_color_grey" />
+
+            <com.silentnotary.widget.textview.FileDetailsDetailTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="Download" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

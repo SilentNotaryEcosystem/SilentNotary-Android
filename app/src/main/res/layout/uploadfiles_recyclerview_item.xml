@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+    android:background="@color/white"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:scaleType="centerCrop"
+        android:layout_width="@dimen/upload_file_recyclerview_item_image_size"
+        android:layout_height="@dimen/upload_file_recyclerview_item_image_size"
+        tools:src="@drawable/ic_account_circle_black_24dp"
+        android:id="@+id/imageViewUploadFile" />
+
+    <com.silentnotary.widget.textview.TextViewRegular
+        android:id="@+id/textViewUploadFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        tools:text="avatar.jpavda"
+        android:gravity="left"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/imageViewUploadFile"
+        android:layout_toRightOf="@+id/imageViewUploadFile"
+        android:layout_toLeftOf="@+id/removeButtonUploadFile"
+        android:layout_toStartOf="@+id/removeButtonUploadFile" />
+    <RelativeLayout
+        android:layout_width="@dimen/upload_file_recyclerview_item_image_size"
+        android:layout_height="@dimen/upload_file_recyclerview_item_image_size"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/white"
+        android:id="@+id/removeButtonUploadFile">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_remove_circle_outline_black_24dp" />
+    </RelativeLayout>
+
+    <com.silentnotary.widget.textview.TextViewRegular
+        android:id="@+id/textViewFileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUploadFile"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/imageViewUploadFile"
+        android:layout_toRightOf="@+id/imageViewUploadFile"
+        tools:text="51KB" />
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+package com.silentnotary.ui.main.view;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.AppCompatActivity;
+
+import com.github.orangegangsters.lollipin.lib.interfaces.LifeCycleInterface;
+import com.github.orangegangsters.lollipin.lib.managers.AppLockActivity;
+
+/**
+ * Created by albert on 10/25/17.
+ */
+
+public class BaseActivity extends AppCompatActivity {
+    private static LifeCycleInterface mLifeCycleListener;
+    private final BroadcastReceiver mPinCancelledReceiver;
+
+    public BaseActivity() {
+        mPinCancelledReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                finish();
+            }
+        };
+    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        IntentFilter filter = new IntentFilter(AppLockActivity.ACTION_CANCEL);
+        LocalBroadcastManager.getInstance(this).registerReceiver(mPinCancelledReceiver, filter);
+
+        if (mLifeCycleListener != null) {
+            mLifeCycleListener.onActivityResumed(BaseActivity.this);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        if (mLifeCycleListener != null) {
+            mLifeCycleListener.onActivityPaused(BaseActivity.this);
+        }
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mPinCancelledReceiver);
+    }
+
+    public static void setListener(LifeCycleInterface listener) {
+        if (mLifeCycleListener != null) {
+            mLifeCycleListener = null;
+        }
+        mLifeCycleListener = listener;
+    }
+
+    public static void clearListeners() {
+        mLifeCycleListener = null;
+    }
+
+    public static boolean hasListeners() {
+        return (mLifeCycleListener != null);
+    }
+
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0d194c</color>
+    <color name="colorPrimaryDark">#0d194c</color>
+    <color name="colorAccent">#1e9afc</color>
+
+    <color name="white">#ffffff</color>
+    <color name="red_withc_alpha">#b8c40000</color>
+    <color name="red">#c40000</color>
+    <color name="black">#000000</color>
+    <color name="link_color">#0645ad</color>
+    <color name="pending_view_background">#f4f4f4</color>
+    <color name="divider_color">#f4f4f4</color>
+    <color name="silentnotary_background">#1e9afc</color>
+    <color name="divider_color_grey">#e7e7e7</color>
+
+    <color name="loader_color">#000000</color>
+    <color name="background_gray">#f9f9f9</color>
+    <color name="signin_backgoround">#cccccc</color>
+</resources>
