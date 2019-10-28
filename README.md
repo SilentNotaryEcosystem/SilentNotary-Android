@@ -1,4 +1,4 @@
-#  Wallet on iOS
+#  Wallet on Android
 
 This repository contains the source code for the SilentNotary Android app.
 
