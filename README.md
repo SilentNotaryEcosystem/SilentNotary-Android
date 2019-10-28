@@ -1,4 +1,4 @@
-# Waves Wallet on iOS
+#  Wallet on iOS
 
 This repository contains the source code for the SilentNotary Android app.
 
